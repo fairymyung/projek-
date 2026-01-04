@@ -1,29 +1,20 @@
-// * class - static keyword
+// * class - Positional Parameters
 
 void main() {
-  Manusia x = Manusia();
+  Manusia x = Manusia('nadia');
   x.beraksi();
   print(x.nama);
   print(x.umur);
-
-  print(Manusia.a);
-  print(Manusia.b);
-  Manusia.menyala();
+  print(x.tinggi);
 }
 
 class Manusia {
-  Manusia();
-  var nama = 'nadia';
-  var umur = 12;
+  Manusia(this.nama, [this.umur, this.tinggi = 1.4]);
+  String nama;
+  int? umur;
+  double tinggi;
+
   void beraksi() {
-    print('selamat siang');
-  }
-
-  // * static part of class
-  static var a = 23;
-  static final b = 'hehe';
-
-  static void menyala() {
-    print('abangku');
+    print('haihai');
   }
 }
