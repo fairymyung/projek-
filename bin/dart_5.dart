@@ -1,39 +1,29 @@
-// * class - acces and modify field
+// * class - static keyword
 
 void main() {
-  var c = Manusia();
-  print(c);
+  Manusia x = Manusia();
+  x.beraksi();
+  print(x.nama);
+  print(x.umur);
 
-  c.beraksi();
-  // c.nama;
-  // c.umur;
-  c.cetak();
-  c.nama = 'dinda';
-  c.umur = 20;
-  c.cetak();
-
-  c.modify();
+  print(Manusia.a);
+  print(Manusia.b);
+  Manusia.menyala();
 }
 
 class Manusia {
   Manusia();
-
-  var nama = 'baba';
-  var umur = 19;
-
+  var nama = 'nadia';
+  var umur = 12;
   void beraksi() {
-    print('selamat pagi dunia');
+    print('selamat siang');
   }
 
-  void cetak() {
-    print(nama);
-    print(umur);
-  }
+  // * static part of class
+  static var a = 23;
+  static final b = 'hehe';
 
-  void modify() {
-    nama = ' sule';
-    umur = 33;
-    print(nama);
-    print(umur);
+  static void menyala() {
+    print('abangku');
   }
 }
