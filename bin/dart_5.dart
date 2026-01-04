@@ -1,25 +1,39 @@
-@void main() {
-  var x = Manusia();
-  print(x);
+// * class - acces and modify field
 
-  int b = 12;
-  print(b);
-  x.beraksi();
-  print(x.nama);
-  print(x.umur);
+void main() {
+  var c = Manusia();
+  print(c);
+
+  c.beraksi();
+  // c.nama;
+  // c.umur;
+  c.cetak();
+  c.nama = 'dinda';
+  c.umur = 20;
+  c.cetak();
+
+  c.modify();
 }
 
-// * class = cetakan /model
 class Manusia {
-  // * construct = fungsi khusus dimana fungsi ini mempunyai nama yang sama kaya classnya sendiri
   Manusia();
 
-  // * field = variabel yang ada didalam class
-  var nama = 'dinda';
-  var umur = 12;
+  var nama = 'baba';
+  var umur = 19;
 
-  // * method = function yang ada di dalam class
   void beraksi() {
-    print('ada apa dunia');
+    print('selamat pagi dunia');
+  }
+
+  void cetak() {
+    print(nama);
+    print(umur);
+  }
+
+  void modify() {
+    nama = ' sule';
+    umur = 33;
+    print(nama);
+    print(umur);
   }
 }
