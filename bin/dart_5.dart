@@ -1,7 +1,7 @@
-// * class - positional and named Parameters
+// * class - constructor
 
 void main() {
-  Manusia x = Manusia('udin');
+  Manusia x = Manusia();
   x.beraksi();
   print(x.nama);
   print(x.umur);
@@ -9,13 +9,18 @@ void main() {
 }
 
 class Manusia {
-  Manusia(this.nama, {this.umur, this.tinggi = 1.4});
+  Manusia();
 
-  String nama;
-  int? umur;
+  String nama = 'udin';
+  int umur = 12;
   double? tinggi;
 
   void beraksi() {
     print('hai');
   }
 }
+
+// * sebuah fungsi spesial dari class
+// * mempunyai nama yang sama dengan class nya
+// * dart akan otomatis buat default constructor
+// * default constructor adalah constructor tapi tanpa parameter
