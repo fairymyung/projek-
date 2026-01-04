@@ -1,7 +1,7 @@
-// * class - named Parameters
+// * class - positional and named Parameters
 
 void main() {
-  Manusia x = Manusia(nama: 'udin', tinggi: 1.9, umur: 12);
+  Manusia x = Manusia('udin');
   x.beraksi();
   print(x.nama);
   print(x.umur);
@@ -9,13 +9,13 @@ void main() {
 }
 
 class Manusia {
-  Manusia({this.nama = 'ule', this.umur = 18, this.tinggi = 1.3});
+  Manusia(this.nama, {this.umur, this.tinggi = 1.4});
 
   String nama;
-  int umur;
-  double tinggi;
+  int? umur;
+  double? tinggi;
 
   void beraksi() {
-    print('holla there');
+    print('hai');
   }
 }
