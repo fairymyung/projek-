@@ -1,38 +1,43 @@
-// * class - constructor ( from classic to condensed)
+// * inheritance - extends
 
 void main() {
-  Manusia x = Manusia(umur: 12, tinggi: 1.6, nama: 'dudu');
+  var x = Satu();
+  print(x.a);
+  print(x.b);
+  print(x.c);
   x.beraksi();
-  print(x.nama);
-  print(x.umur);
-  print(x.tinggi);
+
+  var y = Dua();
+  print(y.a);
+  print(y.b);
+  print(y.c);
+  print(y.d);
+  print(y.e);
+  y.beraksi();
+
+  var z = Tiga();
+  print(z.a);
+  print(z.f);
+  print(z.e);
+  z.beraksi();
 }
 
-class Manusia {
-  Manusia({required this.nama, required this.umur, required this.tinggi});
-
-  // *constructor condensed with named parameters
-  // Manusia({required this.nama, required this.umur, required this.tinggi});
-
-  // *constructor condensed with positionL parameters
-  // Manusia(this.nama, this.umur, this.tinggi);
-
-  // *constructor classic with named parameters
-  // Manusia({required String namax, required int umurx, required double tinggix}) {
-  //   nama = namax;
-  //   umur = umurx;
-  //   tinggi = tinggix;
-  // *constructor classic with positional parameters
-  // Manusia(String namax, int umurx, double tinggix) {
-  //   nama = namax;
-  //   umur = umurx;
-  //   tinggi = tinggix;
-
-  String nama = 'nanad';
-  int umur = 20;
-  double tinggi = 2.2;
-
+// * parents/super class
+class Satu {
+  int a = 1;
+  int b = 2;
+  int c = 3;
   void beraksi() {
-    print('hai siapa kamu');
+    print('----------------------------------------');
   }
+}
+
+// * child/sub class
+class Dua extends Satu {
+  int d = 8;
+  int e = 9;
+}
+
+class Tiga extends Dua {
+  int f = 7;
 }
