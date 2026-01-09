@@ -1,43 +1,28 @@
-// * inheritance - extends
+// * inheritance - override
 
 void main() {
-  var x = Satu();
-  print(x.a);
-  print(x.b);
-  print(x.c);
-  x.beraksi();
-
-  var y = Dua();
-  print(y.a);
-  print(y.b);
-  print(y.c);
-  print(y.d);
-  print(y.e);
-  y.beraksi();
-
-  var z = Tiga();
-  print(z.a);
-  print(z.f);
-  print(z.e);
-  z.beraksi();
+  var x = Dua();
+  x.cetakSatu();
+  x.cetakDua();
 }
 
-// * parents/super class
 class Satu {
-  int a = 1;
-  int b = 2;
-  int c = 3;
-  void beraksi() {
-    print('----------------------------------------');
+  var a = 1;
+  var b = 2;
+  void cetakSatu() {
+    print('5555555');
   }
 }
 
-// * child/sub class
 class Dua extends Satu {
-  int d = 8;
-  int e = 9;
-}
+  var c = 6;
+  var d = 7;
+  void cetakDua() {
+    print('666666');
+  }
 
-class Tiga extends Dua {
-  int f = 7;
+  @override
+  void cetakSatu() {
+    print('111111');
+  }
 }
