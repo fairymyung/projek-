@@ -1,28 +1,27 @@
-// * inheritance - override
-
+// * inheritance - abstrak class
 void main() {
-  var x = Dua();
-  x.cetakSatu();
-  x.cetakDua();
+  // var x = Satu();
+  // x.beraksi();
 }
 
-class Satu {
-  var a = 1;
-  var b = 2;
-  void cetakSatu() {
-    print('5555555');
+abstract class Satu {
+  var a = 0;
+  void beraksi() {
+    print('eeee');
   }
 }
 
 class Dua extends Satu {
-  var c = 6;
-  var d = 7;
-  void cetakDua() {
-    print('666666');
+  var b = 9;
+  void bersiku() {
+    print('ddddd');
   }
 
   @override
-  void cetakSatu() {
-    print('111111');
+  void beraksi() {
+    print('rrrrr');
   }
 }
+
+// * abstrak class adalah sebuah blueprint for other class/subclass
+// * abstrak gak bisa di instansiasi
