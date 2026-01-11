@@ -1,22 +1,25 @@
-// * subtituting types
+// * super constructor
+
 void main() {
-  Satu x = Dua();
-  print(x.a);
-  print(x.runtimeType);
+  var x = Manusia(nama: 'popi', umur: 89);
+  print(x.nama);
+  print(x.umur);
+
+  var y = Siswa('sma', 9, namax: 'uun', umurx: 8);
+  print(y.sekolah);
+  print(y.kelas);
+  print(y.nama);
+  print(y.umur);
 }
 
-mixin class Satu {
-  var a = 9;
-  var b = 7;
+class Manusia {
+  Manusia({required this.nama, required this.umur});
+  String nama;
+  int umur;
 }
 
-class Dua with Satu {
-  var c = 5;
-  var d = 6;
-
-  // @override
-  // int a = 1;
-
-  // @override
-  // int b = 2;
+class Siswa extends Manusia {
+  Siswa(this.sekolah, this.kelas, {namax, umurx}) : super(nama: namax, umur: umurx);
+  String sekolah;
+  int kelas;
 }
