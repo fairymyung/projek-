@@ -1,15 +1,14 @@
-// * super constructor
-
+// * super parameters
 void main() {
-  var x = Manusia(nama: 'atan', umur: 77);
-  print(x.nama);
-  print(x.umur);
+  var c = Manusia(nama: 'dila', umur: 12);
+  print(c.nama);
+  print(c.umur);
 
-  var y = Siswa(kelas: 10, sekolah: 'sma', umurx: 15, namax: 'usi');
-  print(y.sekolah);
-  print(y.kelas);
-  print(y.nama);
-  print(y.umur);
+  var d = Siswa(nama: 'yaya', umur: 23, sekolah: 'sma', kelas: 2);
+  print(d.sekolah);
+  print(d.kelas);
+  print(d.nama);
+  print(d.umur);
 }
 
 class Manusia {
@@ -19,7 +18,7 @@ class Manusia {
 }
 
 class Siswa extends Manusia {
-  Siswa({required this.sekolah, required this.kelas, namax, umurx}) : super(nama: namax, umur: umurx);
+  Siswa({required this.sekolah, required this.kelas, required super.nama, required super.umur});
   String sekolah;
   int kelas;
 }
