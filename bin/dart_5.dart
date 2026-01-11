@@ -1,32 +1,22 @@
-// * composite - mixin
+// * subtituting types
 void main() {
-  var x = Tiga();
+  Satu x = Dua();
   print(x.a);
-  print(x.b);
-  print(x.c);
-  x.beraksi();
-  x.bergerak();
+  print(x.runtimeType);
 }
 
 mixin class Satu {
-  var a = 2;
-  void beraksi() {
-    print('ppp');
-  }
+  var a = 9;
+  var b = 7;
 }
 
-mixin class Dua {
-  var b = 5;
-  void bergerak() {
-    print('hhhh');
-  }
-}
+class Dua with Satu {
+  var c = 5;
+  var d = 6;
 
-class Tiga with Dua, Satu {
-  var c = 8;
-  void berteman() {
-    print('ayo temenan');
-  }
-}
+  // @override
+  // int a = 1;
 
-// * class gabungan tanpa hub parents-child
+  // @override
+  // int b = 2;
+}
