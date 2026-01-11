@@ -1,32 +1,32 @@
-// * interface - implements
+// * composite - mixin
 void main() {
-  var x = Dua();
+  var x = Tiga();
   print(x.a);
+  print(x.b);
   print(x.c);
   x.beraksi();
   x.bergerak();
 }
 
-// * interface
-class Satu {
-  var a = 33;
+mixin class Satu {
+  var a = 2;
   void beraksi() {
-    print('tatatat');
+    print('ppp');
   }
 }
 
-// *implement an interface
-class Dua implements Satu {
-  var c = 4;
+mixin class Dua {
+  var b = 5;
   void bergerak() {
-    print('iii');
-  }
-
-  @override
-  int a = 9;
-
-  @override
-  void beraksi() {
-    print('ini dia');
+    print('hhhh');
   }
 }
+
+class Tiga with Dua, Satu {
+  var c = 8;
+  void berteman() {
+    print('ayo temenan');
+  }
+}
+
+// * class gabungan tanpa hub parents-child
