@@ -1,24 +1,14 @@
-// * super parameters
+// * generative constructor
 void main() {
-  var c = Manusia(nama: 'dila', umur: 12);
-  print(c.nama);
-  print(c.umur);
-
-  var d = Siswa(nama: 'yaya', umur: 23, sekolah: 'sma', kelas: 2);
-  print(d.sekolah);
-  print(d.kelas);
-  print(d.nama);
-  print(d.umur);
+  var s = Manusia('nadia', 19, 10000000000000);
+  print(s.nama);
+  print(s.umur);
+  print(s.gaji);
 }
 
 class Manusia {
-  Manusia({required this.nama, required this.umur});
+  Manusia(this.nama, this.umur, this.gaji);
   String nama;
   int umur;
-}
-
-class Siswa extends Manusia {
-  Siswa({required this.sekolah, required this.kelas, required super.nama, required super.umur});
-  String sekolah;
-  int kelas;
+  int gaji;
 }
