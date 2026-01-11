@@ -1,44 +1,32 @@
-// * inheritance - abstrak Method
+// * interface - implements
 void main() {
   var x = Dua();
+  print(x.a);
+  print(x.c);
   x.beraksi();
-  x.cetak();
-  x.absd();
+  x.bergerak();
 }
 
-abstract class Satu {
-  var a = 5;
-  var b = 3;
+// * interface
+class Satu {
+  var a = 33;
   void beraksi() {
-    print('eeeee');
+    print('tatatat');
   }
-
-  void absd();
 }
 
-class Dua extends Satu {
-  var c = 7;
-  void cetak() {
-    print('55555');
-  }
-
-  // * optional
-  @override
-  void beraksi() {
-    print('99999');
+// *implement an interface
+class Dua implements Satu {
+  var c = 4;
+  void bergerak() {
+    print('iii');
   }
 
   @override
-  void absd() {
-    print('rrrr');
+  int a = 9;
+
+  @override
+  void beraksi() {
+    print('ini dia');
   }
-
-  // //* mandotory
-  //   @override
-  //   void absd() {
-  //     print('12345');
-  //   }
 }
-
-// * method special yang dimana dia itu tidak mempunyai bodi
-// * akses abstrak method ini dia hanya bisa di akses di abstrak class
