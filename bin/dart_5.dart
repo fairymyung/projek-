@@ -1,27 +1,44 @@
-// * inheritance - abstrak class
+// * inheritance - abstrak Method
 void main() {
-  // var x = Satu();
-  // x.beraksi();
+  var x = Dua();
+  x.beraksi();
+  x.cetak();
+  x.absd();
 }
 
 abstract class Satu {
-  var a = 0;
+  var a = 5;
+  var b = 3;
   void beraksi() {
-    print('eeee');
+    print('eeeee');
   }
+
+  void absd();
 }
 
 class Dua extends Satu {
-  var b = 9;
-  void bersiku() {
-    print('ddddd');
+  var c = 7;
+  void cetak() {
+    print('55555');
+  }
+
+  // * optional
+  @override
+  void beraksi() {
+    print('99999');
   }
 
   @override
-  void beraksi() {
-    print('rrrrr');
+  void absd() {
+    print('rrrr');
   }
+
+  // //* mandotory
+  //   @override
+  //   void absd() {
+  //     print('12345');
+  //   }
 }
 
-// * abstrak class adalah sebuah blueprint for other class/subclass
-// * abstrak gak bisa di instansiasi
+// * method special yang dimana dia itu tidak mempunyai bodi
+// * akses abstrak method ini dia hanya bisa di akses di abstrak class
