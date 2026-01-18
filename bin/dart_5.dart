@@ -1,16 +1,18 @@
-// * HasCode
+// * const constructor
 void main() {
-  var z = Manusia('udin');
+  var x = const Manusia('usi', 19);
+  var z = const Manusia('usi', 19);
+  print(x.hashCode);
+  print('-----------------');
   print(z.hashCode);
-  var c = 10;
-  print(c.hashCode);
+  // * still different value
 }
 
 class Manusia {
-  Manusia(this.nama);
-  String nama;
+  const Manusia(this.nama, this.umur);
+  final String nama;
+  final int umur;
 }
 
-// identifer unik dari sebuah objek di dart
-// dart itu 100% objek oriented programming language, karan setiap  tipe bahkan fungsi itu juga objek
-//  hashcode itu= integer=objek
+// *  const constructor digunakan untuk membuat objek dengan value  yang tidak dapat hiubah
+// * dart bakal mengoptimalkan memori ketika si const constructor digunakan sehingga bakal mengimprove perfomance dari  program
