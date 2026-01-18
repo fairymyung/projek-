@@ -1,35 +1,23 @@
-// * factory constructructor
+// * local vs global variabel
 void main() {
-  var x = Binatang.spesies();
+  var a = 9;
+  var b = 8;
 
-  print(x.runtimeType);
-  x.beraksi();
+  print(a);
+  print(b);
 }
 
-class Binatang {
-  Binatang();
+var d = 9;
 
-  void beraksi() {
-    print('makan...');
-  }
-
-  factory Binatang.spesies() {
-    return Binatang();
+class Hitung {
+  var c = 7;
+  void berantem() {
+    print(c);
   }
 }
+// * local ; di deklarasiin di dalam fungsi, method atau class
+// * hanya  bisa di akses/digunkan di tempat dimana dia di deklasrasiin
 
-class Ikan extends Binatang {
-  @override
-  void beraksi() {
-    print('blublup');
-  }
-}
-
-class Burung extends Binatang {
-  @override
-  void beraksi() {
-    print('kwakkkwakk');
-  }
-}
-
-// * facotry constructor menggunakan return kata kunci untuk mreturn instance dari class
+// * global ; dideklarasiin diluar fungsi, method dan class
+// * bebas akses dimanapun di dalam fungsi method dan class
+// * di dart biasanya seringkali disimpan/dideklarasiin dipaling atas dart file
