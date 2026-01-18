@@ -1,18 +1,35 @@
-// * const constructor
+// * factory constructructor
 void main() {
-  var x = const Manusia('usi', 19);
-  var z = const Manusia('usi', 19);
-  print(x.hashCode);
-  print('-----------------');
-  print(z.hashCode);
-  // * still different value
+  var x = Binatang.spesies();
+
+  print(x.runtimeType);
+  x.beraksi();
 }
 
-class Manusia {
-  const Manusia(this.nama, this.umur);
-  final String nama;
-  final int umur;
+class Binatang {
+  Binatang();
+
+  void beraksi() {
+    print('makan...');
+  }
+
+  factory Binatang.spesies() {
+    return Binatang();
+  }
 }
 
-// *  const constructor digunakan untuk membuat objek dengan value  yang tidak dapat hiubah
-// * dart bakal mengoptimalkan memori ketika si const constructor digunakan sehingga bakal mengimprove perfomance dari  program
+class Ikan extends Binatang {
+  @override
+  void beraksi() {
+    print('blublup');
+  }
+}
+
+class Burung extends Binatang {
+  @override
+  void beraksi() {
+    print('kwakkkwakk');
+  }
+}
+
+// * facotry constructor menggunakan return kata kunci untuk mreturn instance dari class
