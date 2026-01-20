@@ -1,23 +1,15 @@
-// * local vs global variabel
+// * library - import
+
+import 'package:dart_5/pustaka_dua.dart';
+import 'package:dart_5/pustaka_satu.dart';
+
 void main() {
-  var a = 9;
-  var b = 8;
-
-  print(a);
-  print(b);
+  print(c);
+  print(d);
+  beraksi();
+  bergerak();
+  var g = Alien();
+  print(g.b);
 }
 
-var d = 9;
-
-class Hitung {
-  var c = 7;
-  void berantem() {
-    print(c);
-  }
-}
-// * local ; di deklarasiin di dalam fungsi, method atau class
-// * hanya  bisa di akses/digunkan di tempat dimana dia di deklasrasiin
-
-// * global ; dideklarasiin diluar fungsi, method dan class
-// * bebas akses dimanapun di dalam fungsi method dan class
-// * di dart biasanya seringkali disimpan/dideklarasiin dipaling atas dart file
+// * setiap dart itu punya yang namanya library standlone
