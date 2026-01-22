@@ -1,11 +1,26 @@
-// * library - part and part of
-
-import 'package:dart_5/pustaka_.dart';
+// * private identifier
+import 'package:dart_5/pustaka_dua.dart';
 
 void main() {
-  beraksi();
+  bungkus();
+  var j = _Manusia();
+  print(j);
+  j.berkata();
 }
 
-// * part and part of : digunakan  untuk split up across multiple files
-// * part :  ngasih tau dart  untuk memasukkan file sbg bagian daro library
-// * part of : ngasih tau dart bahwa  file ini tu bukan dan tidak bisa di import atau di export
+// var _g = 9;
+// void _beraksi() {
+//   print('jjj');
+// }
+
+class _Manusia {
+  void berkata() {
+    print('lalalal');
+  }
+}
+
+// * public identifier => start without an underscore
+// * private identifier => star with an underscore
+
+// * private identifier are visibile only inside the library
+// * every dart file is a  library

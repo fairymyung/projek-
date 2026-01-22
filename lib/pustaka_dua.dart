@@ -1,8 +1,9 @@
-var d = 77;
-void beraksi() {
-  print('hehehehe');
+void bungkus() {
+  print(_g);
+  _beraksi();
 }
 
-class Alien {
-  var b = 55;
+var _g = 9;
+void _beraksi() {
+  print('jjj');
 }
