@@ -1,8 +1,7 @@
-var c = 77;
-void bergerak() {
-  print('hahahaha');
-}
+part of 'pustaka_.dart';
 
-class Manusia {
-  var a = 99;
+var a = 88;
+
+void bergerak() {
+  print('cuanki');
 }

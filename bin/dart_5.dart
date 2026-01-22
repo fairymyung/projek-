@@ -1,15 +1,11 @@
-// * library - import
+// * library - part and part of
 
-import 'package:dart_5/pustaka_dua.dart';
-import 'package:dart_5/pustaka_satu.dart';
+import 'package:dart_5/pustaka_.dart';
 
 void main() {
-  print(c);
-  print(d);
   beraksi();
-  bergerak();
-  var g = Alien();
-  print(g.b);
 }
 
-// * setiap dart itu punya yang namanya library standlone
+// * part and part of : digunakan  untuk split up across multiple files
+// * part :  ngasih tau dart  untuk memasukkan file sbg bagian daro library
+// * part of : ngasih tau dart bahwa  file ini tu bukan dan tidak bisa di import atau di export
