@@ -1,5 +1,16 @@
 class Manusia {
-  Manusia._();
+  String _nama = 'seila';
+  String _namapanjang = 'on seven';
 
-  Manusia.pribumi() : this._();
+  set nama(String value) {
+    _nama = value;
+  }
+
+  set namapanjang(String value) {
+    _namapanjang = value;
+  }
+
+  String get satu {
+    return '$_nama $_namapanjang';
+  }
 }
