@@ -1,26 +1,14 @@
-// * private identifier
-import 'package:dart_5/pustaka_dua.dart';
+// * private constructor
+
+import 'package:dart_5/pustaka_satu.dart';
 
 void main() {
-  bungkus();
-  var j = _Manusia();
-  print(j);
-  j.berkata();
+  var k = Manusia.pribumi();
+  print(k);
 }
 
-// var _g = 9;
-// void _beraksi() {
-//   print('jjj');
+// class Manusia {
+//   Manusia._();
+
+//   Manusia.pribumi() : this._();
 // }
-
-class _Manusia {
-  void berkata() {
-    print('lalalal');
-  }
-}
-
-// * public identifier => start without an underscore
-// * private identifier => star with an underscore
-
-// * private identifier are visibile only inside the library
-// * every dart file is a  library
