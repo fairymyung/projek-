@@ -1,15 +1,10 @@
-// * getter and setter
+// * arrow function
+void main() {}
 
-import 'package:dart_5/pustaka_satu.dart';
+void beraksi() => print('aku bangun pagi');
 
-void main() {
-  var x = Manusia();
-  print(x.satu);
-  x.nama = 'kila';
-  x.namapanjang = 'aliah';
-  print(x.satu);
-}
+void bergerak() => print('lalalla');
 
-// * getter itu digunakan untuk mengaksws atau melihat saja property value
-// * setter digunakan untuk memodify property value
-// * setter dan getter merupakan special method di dalam class
+// * dart mempunyai special syntax untuk fungsi body, dimana dia hanya mempunyai satu baris aja
+// * arrow function disimbolkan dengan simbol: '=>'
+// * arrow  function merupakan shorthand syntax for any function mepunyai satu baris aja
